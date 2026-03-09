@@ -1,10 +1,8 @@
 package com.example.demo;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
-
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,11 +13,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/auth/qr")
 public class QrController {
-
     private final QrBlockingStore store;
-
     private final JwtService jwtService;
-
     public QrController(QrBlockingStore store, JwtService jwtService) {
         this.store = store;
         this.jwtService = jwtService;
